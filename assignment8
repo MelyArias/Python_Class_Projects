@@ -1,0 +1,58 @@
+#Name: Mely Arias
+#This part of the program is just creating lists of all the rooms and appending those lists to an empty list
+room_list= []
+room=["You are in the Forest.There are two buildings North and East",3, 1, None, None]
+room_list2= room_list.append(room)
+room=["You are in the Hall of Science. Prof.Supplee is teaching lab. There are doors East and South", None, 4, 0, None]
+room_list2= room_list.append(room)
+room=["You are in the Library.'Be quite', people are studying. You can go East,South or West", None, 5, 1, 3]
+room_list2= room_list.append(room)
+room=["You are in the Seminary Hall.There are doors North,East,and West", 4, 2, None, 0]
+room_list2= room_list.append(room)
+room=["You are in the Commons. Dinner is being served. There are exits South and West", None, None, 2, 1]
+room_list2= room_list.append(room)
+room=["You are in Brother's College. There is a passage North and West", 5, None, None, 1]
+room_list2= room_list.append(room)
+room=["You are in the DOYO.You can hear the instruments playing in the background. There is a door South", None, None, 4, None]
+
+current_room=0
+
+done=False
+print("Hi, You have entered the Forest of Drew University.There are two buildings North and East")
+while done==False:
+    print()
+    command=input("Which way do you want to go?")
+    if command.lower()=="north" or command.lower()=="n":
+        next_room=room_list[current_room][1]  #This is assigning the next_room to be the room
+        if next_room==None:                   #that is in the North position[1]of the list current_room
+            print("You can't go that way.")
+        else:
+            current_room=next_room
+            print(room_list[current_room][0])
+
+    elif command.lower()=="east" or command.lower()=="e":
+        next_room=room_list[current_room][2]
+        if next_room==None:
+            print("You can't go that way.")
+        else:
+            current_room=next_room
+            print(room_list[current_room][0])
+
+    elif command.lower()=="south" or command.lower()=="s":
+        next_room=room_list[current_room][3]
+        if next_room==None:
+            print("You can't go that way.")
+        else:
+            current_room=next_room
+            print(room_list[current_room][0])
+
+    elif command.lower()=="west" or command.lower()=="w":
+        next_room=room_list[current_room][4]
+        if next_room==None:
+            print("You can't go that way.")
+        else:
+            current_room=next_room
+            print(room_list[current_room][0])
+
+    else:
+        print("The program does not understand") #In case the user imputs something the program does not accept

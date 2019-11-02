@@ -1,0 +1,95 @@
+# This program is a generated quiz that will ask the user to input a variable and will determine if the variable if correct.
+# If the variable turns out to be correct, the program will add a point to the score of the user.
+print("Hello there, this is a tricky quiz. Make sure you answer every question to the best of your ability and best of luck")
+print("Please for the multiple choice questions. Only answer with a Letter. For example, A, B, C, or D. Thank you and Enjoy")
+print()
+
+score=0           #Set a variable to store the value of score
+
+#Question 1
+print("1. You're 3rd place right now in a race. What place are you in when you pass the person in 2nd place?")
+print("A.1st")
+print("B.2nd")
+print("C.3rd")
+print("D.None of the above.")
+
+q1User_answer=input("Answer?")
+q1answer="A"                        #Set a variable for the correct answer.
+if q1User_answer==q1answer:         #This is comparing if the user's answer was the correct answer.
+    print("Correct")
+    score= score+1                  #This is adding 1 to the score if the user answered the question correctly.
+else:
+    print("Sorry, that was wrong")   #This will print out if the user did not answer the question correctly
+print()
+
+#Question 2
+print("2.How many months have 28 days?")
+
+q2User_answer=int(input("answer?"))
+q2answer=2
+if q1User_answer==q2answer:
+    print("Correct")
+    score = score + 1
+else:
+    print("Sorry, that was wrong")
+print()
+
+#Question 3
+print("3.The answer is really big.")
+print("A.THE ANSWER.")
+print("B.Really big.")
+print("C.An elephant.")
+print("D.The data given is insufficient.")
+
+q3User_answer=input("answer?")
+q3answer="B"
+if q3User_answer==q3answer:
+    print("Correct")
+    score = score + 1
+else:
+    print("Sorry, that was wrong")
+print()
+
+#Question 4
+print("4.There are 45 apples. If you pick up 3 apples, how many apples are there?")
+print("A.3")
+print("B.42")
+print("C.45")
+print("D.125")
+
+q4User_answer=input("answer?")
+q4answer="A"
+if q4User_answer==q4answer:
+    print("Correct")
+    score = score + 1
+else:
+    print("Sorry, that was wrong")
+print()
+
+#Question #5
+print("5.If a leaf falls to the ground in a forest and no one hears it, does it make a sound?")
+print("A.Yes")
+print("B.No.")
+print("C.Depends on how heavy the leaf was.")
+print("D.Depends on where it landed.")
+
+q5User_answer=input("answer?")
+q5answer="A"
+if q5User_answer==q5answer:
+    print("Correct")
+    score = score + 1
+else:
+    print("Sorry, that was wrong")
+
+#This is the function that will calculate the final score of the user
+def calculate_Score(score):
+    if score ==0:
+        print("Sorry you failed. You got a zero")
+    else:
+        finalscore=(score /5)*100       #This converts the decimal into a percentage
+        print("Your final score is",finalscore,"%")
+calculate_Score(score)
+
+print("Thank you for taking this Quiz. Have a Good Day!!!!!")
+
+

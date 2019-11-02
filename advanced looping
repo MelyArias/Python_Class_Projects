@@ -1,0 +1,68 @@
+'''
+for i in range(10):
+    print("*",end="")
+print()
+for i in range(5):
+    print("*", end="")
+print()
+for i in range(20):
+    print("*", end="")
+
+for i in range(10):
+    print()
+    print("*", end="")
+    for i in range(10):
+        print("*",end="")
+for i in range(10):
+    print()
+    for i in range(10):
+        print(i,end="")
+
+for row in range(10):
+    print()
+    for column in range(10):
+        print(row,end="")
+
+n=0
+for row in range(10):
+    print()
+    n += 1
+    for column in range(n):
+        print(column,end="")
+--------------------------------
+for row in range(10):
+    print()
+    for column in range(row+1):
+        print(column, end="")
+--------------------------------
+for row in range(10):
+    print('\n')
+    for spaces in range(row):
+        print("",end="")
+    for column in range(10-row):
+        print(column,end="")
+--------------------------------
+#Did not come out right
+for row in range(1,10):
+    print("\n")
+    for column in range(1,10):
+        x=column*row
+        if x<10:
+            print(" ",x,end="")
+        else:
+            print("",x,"",end="")
+
+Did not work
+for row in range(1,10):
+    print()
+    for column in range(1,10):
+        print((9-column)*"",end=" ")
+    for i in range(1,10):
+        print(i,end="")
+    for j in range(1,10):
+        print(j,end="")
+'''
+for row in range(1,10):
+    for column in range(row):
+        print(column+1, end=" ")
+    print()
